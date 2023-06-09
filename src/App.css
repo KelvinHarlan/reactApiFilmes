@@ -1,0 +1,86 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+.container{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.container .card{
+    background-color: rgb(34, 34, 34);
+    width: 30%;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    
+}
+
+.container .card img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+}
+
+.cardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.titleFilm{
+    text-align: center;
+    color: #fff;
+    max-width: 200px;
+    height: 30px;
+    max-width: 200px;
+    margin: 5px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    
+}
+.avaliation{
+    
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 5px;
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.btnPage{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnPage:hover{
+    background-color: #303030;
+   
+    color: #fff;
+}
+
+.page{
+    margin: 0 20px;
+    text-align: center;
+}
+
+.currentPage{
+    background-color: green;
+    padding: 5px;
+    border-radius: 2px;
+}
