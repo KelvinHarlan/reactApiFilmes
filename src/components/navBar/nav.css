@@ -1,0 +1,23 @@
+.navBar{
+    background-color: red;
+    margin-top: 0;
+   
+}
+
+.navBar nav ul{
+    display: flex;
+    justify-content: end;
+    margin-right: 5vw;
+    
+
+}
+.navBar nav ul li{
+    margin: 10px;
+    list-style: none;
+
+}
+.navBar nav  ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}

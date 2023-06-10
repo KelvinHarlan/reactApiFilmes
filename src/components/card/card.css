@@ -1,0 +1,53 @@
+.card{
+    width: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+
+.card:hover{
+
+    background-color: #1b1b1b;
+}
+
+.card img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+.btnDescrition{
+    background-color: #008000;
+    width: 100%;
+    height: 50px;
+    border: none;
+    margin: 5px 0;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btnDescrition:hover{
+    background-color: #005800;
+}
+
+.vote{
+    background-color: #252525;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descrition{
+    min-width: 200px;
+    min-height: 277px;
+    max-height: 277px;
+    text-align: justify;
+    
+    
+   
+    padding-right: 15px;
+    
+}

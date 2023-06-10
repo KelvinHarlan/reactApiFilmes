@@ -1,0 +1,12 @@
+.titleFilm{
+    text-align: center;
+    color: #fff;
+    max-width: 200px;
+    height: 30px;
+    max-width: 200px;
+    margin: 5px;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
