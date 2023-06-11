@@ -1,15 +1,26 @@
 .navBar{
-    background-color: red;
-    margin-top: 0;
-   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #910000;
+    padding: 10px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.logo{
+    margin-left: 20px;
+
+}
+
+.pointerLogo{
+    color: #000;
 }
 
 .navBar nav ul{
     display: flex;
     justify-content: end;
-    margin-right: 5vw;
-    
-
+    margin: 0;
+    padding:10px;
 }
 .navBar nav ul li{
     margin: 10px;
@@ -19,5 +30,9 @@
 .navBar nav  ul li a{
     text-decoration: none;
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
+}
+
+.navBar nav ul li a:hover{
+    color: #d9ff00;
 }

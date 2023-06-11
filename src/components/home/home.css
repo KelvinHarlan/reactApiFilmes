@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-direction: column;
+  
+}
+.cardsContainer{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+
+}
+
+
+
+
+.btnPage{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #303030;
+    color: #fff;
+}
+
+.btnPage:hover{
+    background-color: #727272;
+   
+    color: #fff;
+}
+
+.page{
+    margin: 0 20px;
+    text-align: center;
+}
+
+.currentPage{
+    background-color: green;
+    padding: 5px;
+    border-radius: 2px;
+}
+.maxPage{
+    background-color: red;
+    padding: 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}

@@ -1,21 +1,30 @@
-.card{
+.card {
     width: 200px;
     margin: 20px;
     border-radius: 10px;
-    padding: 0px 5px;
+    padding: 0px 10px;
+
 }
 
-.card:hover{
+@keyframes animationHover {
 
+    50% {
+        rotate: 5deg;
+    }
+
+}
+
+.card:hover {
     background-color: #1b1b1b;
+    animation: animationHover .3s linear;
 }
 
-.card img{
+.card img {
     width: 200px;
     border-radius: 5px;
 }
 
-.btnDescrition{
+.btnDescrition {
     background-color: #008000;
     width: 100%;
     height: 50px;
@@ -25,11 +34,11 @@
     border-radius: 5px;
 }
 
-.btnDescrition:hover{
+.btnDescrition:hover {
     background-color: #005800;
 }
 
-.vote{
+.vote {
     background-color: #252525;
     height: 50px;
     width: 100%;
@@ -40,14 +49,9 @@
     align-items: center;
 }
 
-.descrition{
-    min-width: 200px;
-    min-height: 277px;
-    max-height: 277px;
+.descrition {
+    padding: 5px;
     text-align: justify;
-    
-    
-   
     padding-right: 15px;
-    
+    min-height: 300px;
 }

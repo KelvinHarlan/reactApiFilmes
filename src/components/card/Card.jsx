@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './card.css';
-import TitleCard from "./titleCard/TitleCard";
+import TitleCard from "./titleCard/TitleCard.jsx";
 
 function Card({ film: { title, poster_path, vote_average, overview } }) {
     const [showDescrition, setShowDescrition] = useState(false);
