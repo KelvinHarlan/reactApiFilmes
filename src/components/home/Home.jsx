@@ -6,6 +6,8 @@ import Search from '../search/Search';
 
 function Home() {
 
+    // declaration states
+
     const [pageNumber, setPageNumber] = useState(1);
 
     const [dataAll, setDataAll] = useState([]);
@@ -14,17 +16,27 @@ function Home() {
 
     const [search, setSearch] = useState('');
 
+    const [genresFilms, setGenresFilms] = useState([]);
+
     const [filteredFilms, setFilteredFilms] = useState([]);
 
+    const [selectedId, setSelectedId] = useState('');
 
 
-
+    //handleChange search
 
     const handleChangeSearch = (({ target }) => {
-        setSearch(target.value)
+        setSearch(target.value);
+    });
+
+    //handreChange Select
+
+    const handleChangeSelect = (({ target }) => {
+        setSelectedId(target.value);
     });
 
 
+    //consuming movies API
 
     useEffect(() => {
 
@@ -40,6 +52,19 @@ function Home() {
             })
     }, [pageNumber])
 
+    //consuming categories movies
+
+    useEffect(() => {
+        const url = 'https://api.themoviedb.org/3/genre/movie/list?api_key=5ec5e2a1c7e8d83302a468d15e1ed7c2&language=en-US';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                setGenresFilms(data['genres'])
+
+            })
+    }, [films])
+
+    // filtering movies
 
     useEffect(() => {
 
@@ -50,21 +75,29 @@ function Home() {
         setFilteredFilms(filtered);
     }, [films, search]);
 
+    // Next page function
 
     const NextPage = () => {
         return pageNumber > 0 && pageNumber < dataAll.total_pages ? setPageNumber(pageNumber + 1) : false
     };
     window.scrollTo(0, 0);
 
+    // return function
 
     const returnPage = () => {
         return pageNumber > 1 && pageNumber < dataAll.total_pages ? setPageNumber(pageNumber - 1) : false
     };
 
+    // rendering content
 
     return (
         <>
-            <Search handleChangeSearch={handleChangeSearch} />
+
+            
+
+            {selectedId}
+
+            <Search handleChangeSearch={handleChangeSearch} handleChangeSelect={handleChangeSelect} genresFilms={genresFilms} />
             <div className='container'>
                 <h2 className='highlights'>Highlights</h2>
                 <div className='cardsContainer'>

@@ -1,6 +1,6 @@
 .searchBox{
    display: flex;
-   justify-content: flex-end;
+   justify-content: space-between;
    margin: 50px 10px 10px 10px;
    padding-right: 10px;
    align-items: center;

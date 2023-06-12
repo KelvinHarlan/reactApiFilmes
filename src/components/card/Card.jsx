@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './card.css';
 import TitleCard from "./titleCard/TitleCard.jsx";
 
 function Card({ film: { title, poster_path, vote_average, overview } }) {
+
+
     const [showDescrition, setShowDescrition] = useState(false);
+
     const imgFilm = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
 
 
     return (
         <div className="card">
+
             <TitleCard title={title} />
+
             {
                 showDescrition === true ?
                     <p className="descrition">{overview}</p> :
