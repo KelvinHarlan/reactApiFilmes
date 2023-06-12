@@ -14,6 +14,7 @@
 
 .pointerLogo{
     color: #000;
+    font-weight: bolder;
 }
 
 .navBar nav ul{
@@ -34,5 +35,5 @@
 }
 
 .navBar nav ul li a:hover{
-    color: #d9ff00;
+    color: #000;
 }

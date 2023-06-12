@@ -1,8 +1,22 @@
 .searchBox{
    display: flex;
    justify-content: flex-end;
-   margin: 10px;
+   margin: 50px 10px 10px 10px;
    padding-right: 10px;
+   align-items: center;
+}
+
+@keyframes animationInputSearch{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 20%;
+    }
+
+    100%{
+       width: 40%;
+    }
 }
 
 .searchBox input{
@@ -12,10 +26,22 @@
     border-radius: 5px;
     border: none;
     padding: 5px 5px 5px 15px;
+    animation: animationInputSearch .5s linear;
 }
 
  input:focus{
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
+}
+
+.seachIcon{
+    font-size: 1.5em;
+    margin-right: 5px;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.seachIcon:hover{
+    color: #910000;
 }

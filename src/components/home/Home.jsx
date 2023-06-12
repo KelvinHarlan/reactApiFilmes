@@ -18,7 +18,13 @@ function Home() {
 
 
 
-    const handleChangeSearch = (({ target }) => { setSearch(target.value) })
+
+
+    const handleChangeSearch = (({ target }) => {
+        setSearch(target.value)
+    });
+
+
 
     useEffect(() => {
 
@@ -60,7 +66,7 @@ function Home() {
         <>
             <Search handleChangeSearch={handleChangeSearch} />
             <div className='container'>
-
+                <h2 className='highlights'>Highlights</h2>
                 <div className='cardsContainer'>
                     {filteredFilms.map((film) => (
                         <Card key={film.id} film={film}></Card>

@@ -1,10 +1,12 @@
 import './nav.css';
 import {Link} from 'react-router-dom';
+import { FaFrog } from "react-icons/fa";
+
 
 function Nav (){
     return (
         <div className='navBar'>
-            <div className='logo'>Films<span className='pointerLogo'>.</span></div>
+            <div className='logo'><FaFrog /> <span className='pointerLogo'>Frog</span>Films</div>
             <nav>
                 <ul>
                     <li>

@@ -55,3 +55,34 @@
     padding-right: 15px;
     min-height: 300px;
 }
+
+
+@media (max-width: 380px){
+    .card{
+        min-width: 100%;
+    }
+    .card img{
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px ) and (min-width: 380px ){
+    .card{
+        width: 140px;
+        margin: 5px;
+    }
+
+    .card img{
+        width: 140px;
+    }
+}
+
+@media (min-width: 768px){
+    .card{
+        width: 150px;
+        margin: 10px;
+    }
+    .card img{
+        width: 150px;
+    }
+}
