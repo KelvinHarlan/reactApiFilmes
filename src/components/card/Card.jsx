@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import './card.css';
 import TitleCard from "./titleCard/TitleCard.jsx";
+import Modal from '../Modal/Modal.jsx';
 
-function Card({ film: { title, poster_path, vote_average, overview } }) {
+function Card({ film: { title, poster_path, vote_average, overview, original_language, release_date } }) {
 
-
+    const onClose = () => {
+        setShowDescrition(!showDescrition)
+    }
     const [showDescrition, setShowDescrition] = useState(false);
 
     const imgFilm = `https://image.tmdb.org/t/p/w500${poster_path}`;
@@ -12,21 +15,28 @@ function Card({ film: { title, poster_path, vote_average, overview } }) {
 
 
     return (
-        <div className="card">
+        <>
+            <div className="card">
+                <TitleCard title={title} />
+                <img src={imgFilm} alt={title} />
+                <div className="vote">
+                    <p className="voteNumber">Nota: {vote_average}</p>
+                </div>
 
-            <TitleCard title={title} />
-
-            {
-                showDescrition === true ?
-                    <p className="descrition">{overview}</p> :
-                    <img src={imgFilm} alt={title} />
-            }
-            <div className="vote">
-                <p className="voteNumber">Nota: {vote_average}</p>
+                <button className="btnDescrition" onClick={() => { setShowDescrition(!showDescrition) }}>More</button>
             </div>
-
-            <button className="btnDescrition" onClick={() => { setShowDescrition(!showDescrition) }}>mostrar</button>
-        </div>
+            {
+                showDescrition &&
+                <Modal onClose={onClose}
+                    overview={overview}
+                    title={title}
+                    imgFilm={imgFilm}
+                    vote_average={vote_average}
+                    original_language={original_language}
+                    release_date={release_date}
+                ></Modal>
+            }
+        </>
     )
 }
 

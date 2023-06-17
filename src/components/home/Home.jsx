@@ -73,7 +73,19 @@ function Home() {
         );
 
         setFilteredFilms(filtered);
+        console.log(filteredFilms)
     }, [films, search]);
+
+
+    useEffect(() => {
+        const filteredSelect = films.filter((film) =>
+            film['genre_ids'].includes(Number(selectedId))
+        )
+
+        setFilteredFilms(filteredSelect)
+    }, [selectedId])
+
+
 
     // Next page function
 
@@ -93,18 +105,19 @@ function Home() {
     return (
         <>
 
-            
-
-            {selectedId}
-
             <Search handleChangeSearch={handleChangeSearch} handleChangeSelect={handleChangeSelect} genresFilms={genresFilms} />
+
             <div className='container'>
                 <h2 className='highlights'>Highlights</h2>
                 <div className='cardsContainer'>
-                    {filteredFilms.map((film) => (
-                        <Card key={film.id} film={film}></Card>
-                    ))}
+                    {filteredFilms.length > 0 ?
+                        filteredFilms.map((film) => (
+                            <Card key={film.id} film={film}></Card>
+                        )) :
+                        <p>Sorry, nothing was found</p>
+                    }
                 </div>
+
 
                 <div className='btnContainer'>
                     <button className='btnPage' onClick={returnPage}>Anterior</button>
@@ -113,7 +126,7 @@ function Home() {
                             {pageNumber}
                         </span> -
                         <span className='maxPage'>
-                            {dataAll.total_pages}
+                            {dataAll['total_pages']}
                         </span>
                     </div>
                     <button className='btnPage' onClick={NextPage}>Próxima</button>

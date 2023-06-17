@@ -1,25 +1,38 @@
-.searchBox{
-   display: flex;
-   justify-content: space-between;
-   margin: 50px 10px 10px 10px;
-   padding-right: 10px;
-   align-items: center;
+.searchBox {
+    display: flex;
+    margin: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@keyframes animationInputSearch{
-    0%{
+.searchBox select {
+    width: 20%;
+    height: 40px;
+    padding-left: 10px;
+}
+
+@keyframes animationInputSearch {
+    0% {
         width: 0%;
     }
-    50%{
+
+    50% {
         width: 20%;
     }
 
-    100%{
-       width: 40%;
+    100% {
+        width: 40%;
     }
 }
 
-.searchBox input{
+.searchCard {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.searchCard input {
     height: 30px;
     width: 40%;
     max-width: 300px;
@@ -29,19 +42,19 @@
     animation: animationInputSearch .5s linear;
 }
 
- input:focus{
+input:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
 }
 
-.seachIcon{
+.seachIcon {
     font-size: 1.5em;
     margin-right: 5px;
     padding: 5px 10px;
     color: #fff;
 }
 
-.seachIcon:hover{
+.seachIcon:hover {
     color: #910000;
 }
